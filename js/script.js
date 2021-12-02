@@ -1,9 +1,9 @@
 function saveIcon(){
     let e = $("i.fad.fa-10x");
-    e.forEach((i)=>{
+    e.each((i)=>{
         html2canvas($(this), {backgroundColor: null}).then((c)=>{
-            let img = c.toDataURL("image/png").replace("image/png", "image/octet-stream");
-            $(".rem").append(`a[href=\"${img}\"]{Icon#${i}}`);
+            let l = c.toDataURL("image/png").replace("image/png", "image/octet-stream");
+            $(".rem").append(`a[href=\"${l}\"]{Icon#${i}}`);
         });
     });
 }
