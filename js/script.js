@@ -40,7 +40,7 @@ function makeJSON(){
             }
         };
     }
-    let url = URL.createObjectURL(new Blob(JSON.stringify(data), {type: "text/plain"}));
+    let url = URL.createObjectURL(new Blob([JSON.stringify(data)], {type: "text/plain"}));
     let a = $(`<a href="${url}" download="elements.json"></a>`);
     a.click();
 }
