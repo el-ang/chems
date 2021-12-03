@@ -8,7 +8,7 @@ function makeJSON(){
                 m: ((i+1.1)*2),
                 pos: {
                     group: "",
-                    period: (Math.round((i+1)/16.97)+1)
+                    period: (Math.round((i+1)/19.67)+1)
                 },
                 class: "",
                 cpkColor: "#null",
