@@ -42,8 +42,18 @@ function makeJSON(){
         console.log(data[i]);
     }
     let url = URL.createObjectURL(new Blob([JSON.stringify(data)], {type: "text/plain"}));
-    let a = $(`<a id="download" href="${url}" download="elements.json"></a>`);
-    $("body").append(a).then(/*$("a#download").click()*/);
+    let a = $(`<a id="download" href="${url}" download="elements.json"><b>Download Elements</b></a>`);
+    a.css({
+        "height": "6rem",
+        "width": "max-content",
+        "padding": "1rem",
+        "border-radius": "3rem",
+        "background": "cornflowerblue",
+        "color": "white !important",
+        "text-align": "center",
+        "vertical-align": "middle"
+    });
+    $("body").append(a);
 }
 
 $(document).ready(()=>{
