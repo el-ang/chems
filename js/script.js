@@ -8,7 +8,7 @@ function makeJSON(){
                 m: ((i+1.1)*2),
                 pos: {
                     group: "",
-                    period: Math.round((i+1)/16.85)
+                    period: (Math.round((i+1)/16.97)+1)
                 },
                 class: "",
                 cpkColor: "#null",
@@ -39,7 +39,6 @@ function makeJSON(){
                 }
             }
         };
-        console.log(data[i]);
     }
     let url = URL.createObjectURL(new Blob([JSON.stringify(data)], {type: "text/plain"}));
     let a = $(`<a id="download" href="${url}" download="elements.json"><b>Download Elements</b></a>`);
