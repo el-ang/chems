@@ -39,10 +39,11 @@ function makeJSON(){
                 }
             }
         };
+        console.log(data[i]);
     }
     let url = URL.createObjectURL(new Blob([JSON.stringify(data)], {type: "text/plain"}));
-    let a = $(`<a href="${url}" download="elements.json"></a>`);
-    a.click();
+    let a = $(`<a id="download" href="${url}" download="elements.json"></a>`);
+    $("body").append(a).then(/*$("a#download").click()*/);
 }
 
 $(document).ready(()=>{
